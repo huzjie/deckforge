@@ -1,0 +1,14 @@
+# Full-scale recipe: larger embedding, finer grid, more decks, denser sweep.
+model:
+  skill: 0.5
+  dim: 32
+  grid_w: 60
+  grid_h: 36
+world:
+  n_decks: 40
+  repair_rounds: 3
+bench:
+  skills: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+report:
+  format: markdown
+  out_dir: reports

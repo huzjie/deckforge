@@ -1,0 +1,6 @@
+apiVersion: v2
+name: deckforge
+description: A Helm chart for deckforge, a zero-dependency slide-deck generation agent (Palette style) with separate design and coding stages, synthetic data and a checked repair harness
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

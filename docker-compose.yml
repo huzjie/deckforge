@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  deckforge:
+    build: .
+    container_name: deckforge
+    ports:
+      - "8431:8431"
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: ["python", "-m", "deckforge.cli", "serve", "--host", "0.0.0.0", "--port", "8431"]

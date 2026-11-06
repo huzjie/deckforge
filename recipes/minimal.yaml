@@ -1,0 +1,14 @@
+# Minimal smoke recipe: tiny scale, two-point sweep (fastest possible run).
+model:
+  skill: 0.5
+  dim: 8
+  grid_w: 24
+  grid_h: 16
+world:
+  n_decks: 5
+  repair_rounds: 1
+bench:
+  skills: [0.0, 1.0]
+report:
+  format: markdown
+  out_dir: reports

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deckforge"
+version = "0.1.0"
+description = "deckforge: a zero-dependency reference implementation of a slide-deck generation agent (IBM Palette style). It models the whole 'outline -> design spec -> render layout -> check -> repair' pipeline with separate design and coding stages: a deterministic synthetic deck renderer feeds a semantic encoder that aligns natural-language outline points to elements, a layout head regresses element -> bbox point, a designer emits title/bullet/chart/image/footer specs, and a closed-form layout oracle + programmatic verifier produce a verifiable reward that a skill trainer climbs monotonically. Four metrics (layout_acc, design_acc, deck_success, score) converge 0 -> 1 by construction, plus a checked repair harness. Pure Python, no numpy/torch/requests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "deckforge contributors" }]
+keywords = ["slide-deck", "deck-generation", "design-stage", "coding-stage", "synthetic-data", "repair-harness", "verifiable-reward", "agent", "zero-dependency", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.scripts]
+deckforge = "deckforge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["deckforge*"]
